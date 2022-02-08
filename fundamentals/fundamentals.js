@@ -1,11 +1,8 @@
-
 /*
   Fundamentals Section:
 
   You may use any ES6+ features you like (or none at all).
 */
-
-
 
 /*
   1: Create a function that takes an array of numbers and return both the minimum and maximum numbers, in that order.
@@ -19,27 +16,39 @@
     minMax([1]) ➞ [1, 1]
 */
 
-function minMax (values) {
-
+function minMax(values) {
+  values = values.filter((ele) => {
+    return typeof ele === 'number';
+  });
+  return [Math.min(...values), Math.max(...values)];
 }
-
-
+minMax([1, 2, 'z', 3, 4, 5]);
+minMax([1, 2, 3, 4, 5]);
+minMax([2334454, 5]);
+minMax([2334454, '1', 5]);
+minMax([1]);
 
 /*
   2. Sorting Objects
   Create a function that takes an array of objects and a string field name, and returns the array of objects sorted in ascending order by the field name.
 
   Example:
-  sortObjects[{ text: 'Kim', value: '1'}, { text: 'John', value: 3}, { text: 'Sally', value: 2}], 'value') 
+  sortObjects([{ text: 'Kim', value: '1'}, { text: 'John', value: 3}, { text: 'Sally', value: 2}], 'value') 
     ➞ [{ text: 'Kim', value: '1'}, { text: 'Sally', value: 2}, { text: 'John', value: 3}]
 */
 
-function sortObjects (values, sortBy) {
-
+function sortObjects(values, sortBy) {
+  values.forEach((ele) => {
+    if (Number(ele.value)) ele.value = Number(ele.value);
+  });
+  return values.sort((a, b) => a[sortBy] - b[sortBy]);
 }
 
-
-
-
-
-
+sortObjects(
+  [
+    { text: 'Kim', value: '1' },
+    { text: 'Sally', value: 2 },
+    { text: 'John', value: 3 },
+  ],
+  'value'
+);

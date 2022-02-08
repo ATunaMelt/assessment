@@ -1,0 +1,19 @@
+{
+  "name": "assessmentcolek",
+  "version": "1.0.0",
+  "description": "## Format: The assessment is broken up into three parts:  * `fundamentals` - **Required for all candidates** These are to test the fundamental understanding of programming you can do it in either JavaScript or C# * `backend` - This is used to test your knowledge on backend development * `frontend` - This is used to test your knowledge on JavaScript, HTML, & CSS",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ATunaMelt/AssessmentColeK.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ATunaMelt/AssessmentColeK/issues"
+  },
+  "homepage": "https://github.com/ATunaMelt/AssessmentColeK#readme"
+}
