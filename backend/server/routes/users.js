@@ -14,7 +14,6 @@ router.get('/', async (req, res, next) => {
 
 // Create One
 router.post('/', async (req, res, next) => {
-  console.log(req.body);
   try {
     const { name, password } = req.body;
     const newUser = { name: name, password: password };

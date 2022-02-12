@@ -4,15 +4,12 @@ const db = require('../db');
 const Content = db.define('Content', {
   msg: {
     type: DataTypes.STRING,
-    allowNull: false,
+    allowNull: false
   },
   sender: {
     type: DataTypes.STRING,
-    allowNull: false,
-  },
-  chatId: {
-    type: DataTypes.INTEGER,
-  },
+    allowNull: false
+  }
 });
 
 module.exports = Content;
