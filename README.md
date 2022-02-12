@@ -26,8 +26,10 @@ This is NOT a pass/fail test, we want to see your approach to problem solving an
 
 ## Instructions for running:
 
-1. run npm install
-1. create a .env and fill it with local database credentials. they are used in backend/server/db/db.js
-1. postgres sever must be installed and a db named assessmentcolek must be running locally.
-1. npm start will spin up a sever on @localhost:3000
-1. the db.js file will drop and re-sync the database upon each npm start. comment out line 13 in backend/server/db/db.js to prevent this
+1. run `npm install`
+1. make sure you have postgres >13 installed on your computer
+1. create a .env and add `DB_USER={your_user}` and `DB_PASS={your_pass}`. They are used in `backend/server/db/db.js`
+1. run `npm start` to spin up a sever on @localhost:3000
+1. to test api routes, import insomnia collection in `/backend/api-testing/insomnia_Routes_Export.json` to your local insomnia app.
+
+Note: the `db.js` file will drop and re-sync the database upon each npm start. comment out line 13 in `backend/server/db/db.js` to prevent this
