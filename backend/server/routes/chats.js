@@ -16,7 +16,6 @@ router.get('/', async (req, res, next) => {
 // Send a new message to a specific chat
 router.post('/:chatId', async (req, res, next) => {
   try {
-    w;
     let chatId = Number(req.params.chatId);
     const body = { ...req.body };
     body.sender = Number(body.sender);
